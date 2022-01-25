@@ -1,0 +1,53 @@
+body, h1, h2, h3, h4, h5, h6, .dropdown-menu,.select2-selection__rendered {
+    font-family: 'Cairo', sans-serif;
+}
+.page-logo ,.page-logo a,#users-emails,.caption,#countries-names,#cities-names,#states-names{
+    float: right !important;
+}
+.top-menu,#datatable_ajax_wrapper .dt-buttons{
+    float: left !important;
+}
+.menu-toggler{
+    margin-right: 10px !important;
+}
+.page-header.navbar .top-menu .navbar-nav>li.dropdown-user .dropdown-menu>li>a{
+    font-size: 12px !important;
+}
+.dropdown-user .dropdown-menu{
+   margin-right: -74px;
+    max-width: 160px;
+}
+.page-header.navbar .top-menu .navbar-nav>li.dropdown .dropdown-menu:after{
+    right: 150px;
+    left: 20px;
+}
+.page-sidebar .page-sidebar-menu li>a>.arrow:before, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu li>a>.arrow:before {
+    left: 0px;
+    right: auto;
+}
+.datepicker-dropdown {max-width: 222px !important;}
+.datepicker,.select2-container--bootstrap .select2-selection--multiple .select2-selection__choice {float: right !important;}
+/*.datepicker.dropdown-menu {right:auto !important;}*/
+
+.datepicker-dropdown.datepicker-orient-left:before,.datepicker-dropdown.datepicker-orient-left:after{
+    display: none;
+}
+.page-sidebar .page-sidebar-menu li>a>.badge{
+    right: 140px;
+}
+.question-object .edit_question,#questionsContent .edit_question{
+    float: left;
+}
+.question-object,#newQuestions{
+    direction: ltr;
+}
+#newQuestions ,#newQuestions input, #newQuestions input::placeholder,.question-object input
+{
+    text-align: right;
+}
+#addmodules_questionsEditForm #difficulty_type{
+    direction: rtl;
+}
+.page-404-full-page .details p{
+    font-size: 20px;
+}

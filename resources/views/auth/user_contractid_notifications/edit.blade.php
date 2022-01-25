@@ -1,0 +1,128 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Mohammed.Hamza
+ * Date: 18-Dec-18
+ * Time: 02:54 PM
+ */
+?>
+
+{{--{{ print_r(json_decode($post->custom_views_projects)).dd() }}--}}
+@extends('auth.layouts.app')
+@section('pageTitle')
+    <title>{{ Lang::get('main.home_page_title') }}</title>
+@endsection
+@section('contentHeader')
+    <!-- BEGIN PAGE HEADER-->
+    <!-- BEGIN PAGE BAR -->
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                <a href="{{ URL('/admin') }}">{{ Lang::get('main.dashboard') }}</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <a href="{{ URL('/admin/user_contractid_notifications') }}">{{ Lang::get('main.user_contractid_notifications') }}</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <span>{{ Lang::get('main.edit') }}</span>
+            </li>
+
+        </ul>
+    </div>
+    <!-- END PAGE BAR -->
+    <!-- BEGIN PAGE TITLE-->
+    <h1 class="page-title"> {{ Lang::get('main.user_contractid_notifications') }}
+        <small>{{ Lang::get('main.edit') }}</small>
+    </h1>
+    <!-- END PAGE TITLE-->
+    <!-- END PAGE HEADER-->
+@endsection
+@section('content')
+
+    <div class="row">
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption font-dark">
+                    <i class="icon-users font-dark"></i>
+                    <span class="caption-subject bold uppercase">{{ Lang::get('main.user_contractid_notifications') }}</span>
+                </div>
+                <div class="tools"></div>
+            </div>
+            <div class="portlet-body">
+                {!! Form::open(['method'=>'PUT','url'=>'admin/user_contractid_notifications/'.$contract->id,'class'=>"form-horizontal"]) !!}
+                <div class="form-body">
+                    <div class="alert alert-danger display-hide">
+                        <button class="close" data-close="alert"></button>
+                        {{ Lang::get('main.form_validation_error') }}
+                    </div>
+                    <div class="alert alert-success display-hide">
+                        <button class="close" data-close="alert"></button>
+                        {{ Lang::get('main.form_validation_success') }}
+                    </div>
+                </div>
+
+                <div id="messages"></div>
+                <div class="form-group col-lg-12">
+                    <label class="control-label" for="action">{{ Lang::get('main.action') }} <span
+                                class="required"> * </span></label>
+                    <div class="input-icon right">
+                        <i class="fa"></i>
+                        <input type="text" class="form-control" value="{{$contract->action}}" name="action" data-required="1"
+                               placeholder="{{ Lang::get('main.enter').Lang::get('main.action') }}">
+                    </div>
+                </div>
+                {{--<div class="form-group col-lg-3 text-center" style="margin-top:25px;">--}}
+                    {{--<input type="checkbox" class="make-switch" name="published" value="yes"--}}
+                           {{--@if($contract->published=="yes") checked @endif data-size="small" data-on-color="success"--}}
+                           {{--data-on-text="{{ Lang::get('main.published') }}" data-off-color="default" data-off-text="{{ Lang::get('main.unpublished') }}">--}}
+                {{--</div>--}}
+
+                <div class="form-group col-lg-12">
+                    <label class="control-label" for="subscription_contractid">{{ Lang::get('main.subscription_contractid') }} <span
+                                class="required"> * </span></label>
+                    <div class="input-icon right">
+                        <i class="fa"></i>
+                        <input type="text" class="form-control" value="{{$contract->subscriptioncontractid}}" name="subscription_contractid" data-required="1"
+                               placeholder="{{ Lang::get('main.enter').Lang::get('main.subscription_contractid') }}">
+                    </div>
+                </div>
+
+                <div class="form-group col-lg-12">
+                    <label class="control-label" for="customer_account_number">{{ Lang::get('main.customer_account_number') }} <span
+                                class="required"> * </span></label>
+                    <div class="input-icon right">
+                        <i class="fa"></i>
+                        <input type="text" class="form-control" value="{{$contract->customerAccountNumber}}" name="customer_account_number" data-required="1"
+                               placeholder="{{ Lang::get('main.enter').Lang::get('main.customer_account_number') }}">
+                    </div>
+                </div>
+                <div class="form-group col-lg-12">
+                    <label class="control-label" for="status">{{ Lang::get('main.status') }} <span
+                                class="required"> * </span></label>
+                    <div class="input-icon right">
+                        <i class="fa"></i>
+                        <input type="text" class="form-control" value="{{$contract->status}}" name="status" data-required="1"
+                               placeholder="{{ Lang::get('main.enter').Lang::get('main.status') }}">
+                    </div>
+                </div>
+                <div class="form-group col-lg-12">
+                    <label class="control-label" for="digest">{{ Lang::get('main.digest') }} <span
+                                class="required"> * </span></label>
+                    <div class="input-icon right">
+                        <i class="fa"></i>
+                        <input type="text" class="form-control" value="{{$contract->digest}}" name="digest" data-required="1"
+                               placeholder="{{ Lang::get('main.enter').Lang::get('main.digest') }}">
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="text-center col-lg-12">
+                    <button type="submit" class="btn green">{{ Lang::get('main.save') }}</button>
+                </div>
+                <div class="clearfix"></div>
+                {!! Form::close() !!}
+            </div>
+        </div>
+    </div>
+@endsection

@@ -1,0 +1,150 @@
+@font-face {
+    font-family: cocon;
+    src: url('https://www.e3melbusiness.com/assets/css/font/cocon.otf');
+}
+*{
+    font-family: cocon!important;
+}
+#report-details{
+    font-size: 23px;
+}
+.color1{
+    color:#262d49;
+}
+.color2{
+    color:#ea4923;
+}
+.bold{
+    font-weight: bold;
+    font-size: 25px;
+}
+.small{
+    font-size: 15px;
+}
+
+
+
+#about-course input[type='checkbox']{
+    top:3px;
+    right:0px;
+    left:auto;
+}
+#about-course .checkbox p{padding-right:20px; }
+input[type="checkbox"] {
+    display:none;
+}
+#about-course h4{
+    font-size: 22px;
+}
+#about-course .chose{
+    font-size: 15px;
+}
+
+
+.chose input[type="checkbox"] + label span {
+    display:inline-block;
+    width:35px;
+    height:35px;
+    margin:-2px 10px 0 0;
+    vertical-align:middle;
+    background:url(https://www.e3melbusiness.com/assets/images/checkbox/checkbox-unchecked.png) center center no-repeat;
+    cursor:pointer;
+}
+
+.chose input[type="checkbox"]:checked + label span {
+    background:url(https://www.e3melbusiness.com/assets/images/checkbox/checkbox-checked-green.png) center center no-repeat;
+}
+.chose input[type="checkbox"] + label span:hover,.chose input[type="checkbox"] + label:hover span {
+    background:url(https://www.e3melbusiness.com/assets/images/checkbox/checkbox-checked-green.png) center center no-repeat;
+    opacity : 0.5;
+}
+
+.chose input[type="radio"] + label span {
+    display:inline-block;
+    width:35px;
+    height:35px;
+    margin:-2px 10px 0 0;
+    vertical-align:middle;
+    background:url(https://www.e3melbusiness.com/assets/images/checkbox/checkbox-unchecked.png) center center no-repeat;
+    cursor:pointer;
+}
+
+.chose input[type="radio"]:checked + label span {
+    background:url(https://www.e3melbusiness.com/assets/images/checkbox/checkbox-checked-green.png) center center no-repeat;
+}
+/*.chose input[type="radio"] + label span:hover,.chose input[type="checkbox"] + label:hover span {
+    background:url(https://www.e3melbusiness.com/assets/images/checkbox/checkbox-checked-green.png) center center no-repeat;
+    opacity : 0.5;
+}*/
+
+
+
+
+input[type="radio"] {
+    display:none;
+}
+
+.false input[type="radio"]:checked + label span {
+    background:url(https://www.e3melbusiness.com/assets/images/checkbox/radio-wrong-checked.png) center center no-repeat #272E4A;
+}
+.false input[type="radio"] + label span {
+    display:inline-block;
+    width:35px;
+    height:35px;
+    margin:-2px 10px 0 0;
+    border-radius: 25px;
+    vertical-align:middle;
+    background:url(https://www.e3melbusiness.com/assets/images/checkbox/radio-wrong-unchecked.png) center center no-repeat #ededed;
+    cursor:pointer;
+}
+
+/*.false input[type="radio"] + label span:hover {
+    background:url(https://www.e3melbusiness.com/assets/images/checkbox/radio-wrong-checked.png) center center no-repeat #272E4A;
+    opacity : 0.5;
+}*/
+
+.true input[type="radio"]:checked + label span {
+    background:url(https://www.e3melbusiness.com/assets/images/checkbox/radio-correct-checked.png) center center no-repeat #272E4A;
+}
+.true input[type="radio"] + label span {
+    display:inline-block;
+    width:35px;
+    height:35px;
+    margin:-2px 10px 0 0;
+    border-radius: 25px;
+    vertical-align:middle;
+    background:url(https://www.e3melbusiness.com/assets/images/checkbox/radio-correct-unchecked.png) center center no-repeat #ededed;
+    cursor:pointer;
+}
+
+/*.true input[type="radio"] + label span:hover {*/
+    /*background:url(https://www.e3melbusiness.com/assets/images/checkbox/radio-correct-checked.png) center center no-repeat #272E4A;*/
+    /*opacity : 0.5;*/
+/*}*/
+.true,.false{
+    display: inline-block;
+}
+.breadcrumb>li+li.no-slash:before {
+    content: ""!important;
+}
+hr.style-seven {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr.style-seven:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+.show-in-print{
+    display: none;
+}

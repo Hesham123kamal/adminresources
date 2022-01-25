@@ -1,0 +1,15 @@
+.c100.big{
+    font-size: 130px;!important;
+}
+.report-details > div{
+    display: block;
+}
+@media print {
+    .show-in-print{
+        display: inline-block!important;
+    }
+    .chose label{
+        display: none;
+    }
+}
+
